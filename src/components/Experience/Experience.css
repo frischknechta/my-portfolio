@@ -1,0 +1,11 @@
+.expContainer {
+  border: 1px solid black;
+}
+
+.left {
+  justify-self: flex-start;
+}
+
+.right {
+  justify-self: flex-end;
+}
