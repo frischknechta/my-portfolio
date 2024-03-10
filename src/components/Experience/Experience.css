@@ -2,10 +2,15 @@
   border: 1px solid black;
 }
 
+.left,
+.right {
+  width: 400px;
+}
+
 .left {
-  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .right {
-  justify-self: flex-end;
+  align-self: flex-end;
 }

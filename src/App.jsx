@@ -1,8 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import Experience from "./components/Experience/Experience";
-import Project from "./components/Project";
+
+import Marvel from "./assets/img/Marvel.png";
+import Vinted from "./assets/img/Vinted.png";
+import Deliveroo from "./assets/img/Deliveroo.png";
+import Tripadvisor from "./assets/img/Tripadvisor.png";
+import Airbnb from "./assets/img/Airbnb.jpg";
 
 function App() {
+  const [isActive, setIsActive] = useState([0, 0, 0, 0, 0]);
+
   return (
     <>
       <header>
@@ -40,41 +48,107 @@ function App() {
           <div className="wrapper">
             <h2>Projects</h2>
             <div className="projectsContainer">
-              <Project
-                title="Vinted"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                  illum veniam ipsam sint ut, neque reprehenderit ipsum
-                  voluptatem nihil quaerat eius temporibus!"
-              />
-              <Project
-                title="Marvel"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                  illum veniam ipsam sint ut, neque reprehenderit ipsum
-                  voluptatem nihil quaerat eius temporibus!"
-              />
-              <Project
-                title="Airbnb App"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                  illum veniam ipsam sint ut, neque reprehenderit ipsum
-                  voluptatem nihil quaerat eius temporibus!"
-              />
-              <Project
-                title="Deliveroo"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                  illum veniam ipsam sint ut, neque reprehenderit ipsum
-                  voluptatem nihil quaerat eius temporibus!"
-              />
-              <Project
-                title="Tripadvisor"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                  illum veniam ipsam sint ut, neque reprehenderit ipsum
-                  voluptatem nihil quaerat eius temporibus!"
-              />
+              <div
+                className={`vinted ${
+                  isActive[0] === 1 ? "active" : "inactive"
+                }`}
+                onClick={() => {
+                  const newTab = [1, 0, 0, 0, 0];
+                  setIsActive(newTab);
+                }}
+              >
+                <div className="descriptionContainer">
+                  <h3>Vinted</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
+                    illum veniam ipsam sint ut, neque reprehenderit ipsum
+                    voluptatem nihil quaerat eius temporibus!
+                  </p>
+                  <div className="btnLink">DEMO</div>
+                </div>
+                <img src={Vinted} alt="Vinted homepage" />
+              </div>
+              <div
+                className={`marvel ${
+                  isActive[1] === 1 ? "active" : "inactive"
+                }`}
+                onClick={() => {
+                  const newTab = [0, 1, 0, 0, 0];
+                  setIsActive(newTab);
+                }}
+              >
+                <div className="descriptionContainer">
+                  <h3>Marvel</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
+                    illum veniam ipsam sint ut, neque reprehenderit ipsum
+                    voluptatem nihil quaerat eius temporibus!
+                  </p>
+                </div>
+                <img src={Marvel} alt="Marvel homepage" />
+              </div>
+              <div
+                className={`airbnb ${
+                  isActive[2] === 1 ? "active" : "inactive"
+                }`}
+                onClick={() => {
+                  const newTab = [0, 0, 1, 0, 0];
+                  setIsActive(newTab);
+                }}
+              >
+                <div className="descriptionContainer">
+                  <h3>Airbnb App</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
+                    illum veniam ipsam sint ut, neque reprehenderit ipsum
+                    voluptatem nihil quaerat eius temporibus!
+                  </p>
+                </div>
+                <img src={Airbnb} alt="Airbnb app" />
+              </div>
+              <div
+                className={`deliveroo ${
+                  isActive[3] === 1 ? "active" : "inactive"
+                }`}
+                onClick={() => {
+                  const newTab = [0, 0, 0, 1, 0];
+                  setIsActive(newTab);
+                }}
+              >
+                <div className="descriptionContainer">
+                  <h3>Deliveroo</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
+                    illum veniam ipsam sint ut, neque reprehenderit ipsum
+                    voluptatem nihil quaerat eius temporibus!
+                  </p>
+                </div>
+                <img src={Deliveroo} alt="Deliveroo homepage" />
+              </div>
+              <div
+                className={`tripadvisor ${
+                  isActive[4] === 1 ? "active" : "inactive"
+                }`}
+                onClick={() => {
+                  const newTab = [0, 0, 0, 0, 1];
+                  setIsActive(newTab);
+                }}
+              >
+                <div className="descriptionContainer">
+                  <h3>Tripadvisor</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
+                    illum veniam ipsam sint ut, neque reprehenderit ipsum
+                    voluptatem nihil quaerat eius temporibus!
+                  </p>
+                </div>
+                <img src={Tripadvisor} alt="Tripadvisor homepage" />
+              </div>
             </div>
           </div>
         </section>
@@ -84,11 +158,29 @@ function App() {
             <h2>About me</h2>
             <div>
               <h3>Skills</h3>
-              <div>Technologies</div>
-              <div>Languages</div>
-              <div>French</div>
-              <div>English</div>
-              <div>German</div>
+              <div>
+                <h4>Technologies</h4>
+                <div className="skillsContainer">
+                  <div>HTML</div>
+                  <div>CSS</div>
+                  <div>JavaScript</div>
+                  <div>React</div>
+                  <div>React Native</div>
+                  <div>Expo</div>
+                  <div>Node.js</div>
+                  <div>Express</div>
+                  <div>MongoDB</div>
+                  <div>GitHub</div>
+                </div>
+              </div>
+              <div>
+                <h4>Languages</h4>
+                <div className="skillsContainer">
+                  <div>French</div>
+                  <div>English</div>
+                  <div>German</div>
+                </div>
+              </div>
             </div>
             <div>
               <h3>Education</h3>

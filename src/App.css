@@ -27,6 +27,12 @@ h3 {
   margin-bottom: 16px;
 }
 
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
 /* HEADER */
 
 header {
@@ -69,9 +75,10 @@ section {
 /* INTRODUCTION SECTION */
 
 #introduction {
-  height: 30vh;
+  height: 40vh;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   background-color: lightgray;
 }
 
@@ -79,12 +86,13 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 /* PROJECTS SECTION */
 
 #projects {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 #projects > div {
@@ -97,6 +105,64 @@ section {
   gap: 20px;
 }
 
+.projectsContainer > div {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projectsContainer img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+  object-fit: cover;
+}
+
+.projectsContainer .active .descriptionContainer {
+  background-color: rgba(150, 150, 150, 0.8);
+  color: white;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.projectsContainer .inactive .descriptionContainer {
+  background-color: rgba(150, 150, 150, 0.8);
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.projectsContainer .inactive {
+  flex: 1;
+  filter: grayscale(100%);
+}
+
+.projectsContainer .inactive h3 {
+  writing-mode: vertical-lr;
+  transform: rotate(0.5turn);
+}
+
+.projectsContainer .inactive p,
+.projectsContainer .inactive .btnLink {
+  display: none;
+}
+
+.projectsContainer .active {
+  flex: 4;
+}
+
 /* ABOUT ME SECTION */
 
 #aboutMe > div {
@@ -105,9 +171,16 @@ section {
   gap: 20px;
 }
 
+.skillsContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
 .experiences {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
