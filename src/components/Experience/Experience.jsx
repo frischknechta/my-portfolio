@@ -1,5 +1,4 @@
 import "./Experience.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Experience = ({ title, from, to, city, where, position }) => {
   return (
@@ -12,9 +11,7 @@ const Experience = ({ title, from, to, city, where, position }) => {
         <div className="date">
           {from} - {to}
         </div>
-        <FontAwesomeIcon
-          icon={`fa-caret-${position === "left" ? "right" : "left"}`}
-        />
+        <div className="arrow"></div>
       </div>
     </div>
   );

@@ -1,0 +1,98 @@
+.projectsContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.projectsContainer > div {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.projectsContainer img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 0;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.descriptionContainer {
+  z-index: 1;
+  position: relative;
+}
+
+.descriptionBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.projectsContainer .active .descriptionContainer {
+  color: var(--secondary-color);
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.projectsContainer .active {
+  flex: 4;
+}
+
+.projectsContainer .active .btnLink {
+  background-color: var(--accentuation);
+  color: var(--secondary-color);
+  width: fit-content;
+  padding: 10px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.projectsContainer .active p {
+  font-size: 20px;
+}
+
+.projectsContainer .inactive .descriptionContainer {
+  color: var(--accentuation);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.projectsContainer .inactive {
+  flex: 1;
+}
+
+.projectsContainer .inactive h3 {
+  writing-mode: vertical-lr;
+  transform: rotate(0.5turn);
+}
+
+.projectsContainer .inactive p,
+.projectsContainer .inactive .btnLink {
+  display: none;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+}

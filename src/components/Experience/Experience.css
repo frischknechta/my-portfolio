@@ -1,45 +1,46 @@
 .expContainer {
   padding: 15px;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: var(--main-color);
+  border-radius: var(--radius);
 }
 
 .expContainer .title {
   font-size: 24px;
 }
 
-.expContainer .company {
-  align-self: center;
-}
-
 .expContainer .date {
   color: var(--accentuation);
-  align-self: flex-end;
+  font-weight: 500;
 }
 
 .left,
 .right {
   width: 400px;
   position: relative;
+  border-radius: var(--radius);
 }
 
 .left {
-  /* align-self: flex-start; */
   margin-left: -500px;
+  box-shadow: -5px 5px 15px 0px rgba(239, 240, 243, 0.7);
 }
 
-.left svg {
+.left .arrow {
+  background-color: var(--secondary-color);
   position: absolute;
+  height: 30px;
+  width: 15px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
   right: -15px;
-  bottom: calc(50% - 20px);
-  font-size: 40px;
+  bottom: calc(50% - 15px);
 }
 
 .right {
-  /* align-self: flex-end; */
   margin-left: 500px;
+  box-shadow: 5px 5px 15px 0px rgba(239, 240, 243, 0.7);
 }
 
 .right svg {
@@ -47,4 +48,14 @@
   left: -15px;
   bottom: calc(50% - 20px);
   font-size: 40px;
+}
+
+.right .arrow {
+  background-color: var(--secondary-color);
+  position: absolute;
+  height: 30px;
+  width: 15px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  left: -15px;
+  bottom: calc(50% - 15px);
 }

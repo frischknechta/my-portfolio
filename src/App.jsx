@@ -1,11 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import Experience from "./components/Experience/Experience";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faCaretRight,
-  faCaretLeft,
   faEnvelope,
+  faFileArrowDown,
+  faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
@@ -17,8 +16,6 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 library.add(
-  faCaretRight,
-  faCaretLeft,
   faHtml5,
   faCss3,
   faJs,
@@ -26,28 +23,27 @@ library.add(
   faReact,
   faGithub,
   faLinkedin,
-  faEnvelope
+  faEnvelope,
+  faFileArrowDown,
+  faDesktop
 );
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Marvel from "./assets/img/Marvel.png";
-import Vinted from "./assets/img/Vinted.png";
-import Deliveroo from "./assets/img/Deliveroo.png";
-import Tripadvisor from "./assets/img/Tripadvisor.png";
-import Airbnb from "./assets/img/Airbnb.jpg";
-import Expo from "./assets/img/logo-expo.svg";
-import MongoDB from "./assets/img/MongoDB-black.svg";
-import ExpressJS from "./assets/img/Expressjs.png";
+import Expo from "./assets/img/Expo.png";
+import MongoDB from "./assets/img/MongoDB-orange.svg";
+import ExpressJS from "./assets/img/Expressjs-orange.png";
+import Profile from "./assets/img/Profile.png";
+
+import data from "./assets/data.json";
+import Projects from "./components/Projects/Projects";
 
 function App() {
-  const [isActive, setIsActive] = useState([0, 0, 0, 0, 0]);
-
   return (
     <>
       <header>
         <div className="wrapper">
           <div>
-            <a href="#introduction">LOGO</a>
+            <a href="/">HOME</a>
           </div>
           <nav>
             <div>
@@ -63,137 +59,46 @@ function App() {
         </div>
       </header>
       <main>
+        {/* INTRODUCTION SECTION */}
+
         <section id="introduction">
           <div className="wrapper">
             <div>
               <h1>
                 Hello, I'm <span>Adrien Frischknecht</span>
               </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                consectetur voluptatibus impedit, consequatur officiis dolor!
-              </p>
+              <h4>Recently trained web developer seeking internship.</h4>
             </div>
-            <div className="btn">Let's get in touch !</div>
+            <a href="mailto:frischknecht.adrien@gmail.com" className="btn">
+              <div>Let's get in touch !</div>
+            </a>
+            <img src={Profile} alt="My profile picture" />
+            <div className="shape"></div>
           </div>
         </section>
+
+        {/* PROJECTS SECTION */}
 
         <section id="projects">
           <div className="wrapper">
-            <h2>Projects</h2>
-            <div className="projectsContainer">
-              <div
-                className={`vinted ${
-                  isActive[0] === 1 ? "active" : "inactive"
-                }`}
-                onClick={() => {
-                  const newTab = [1, 0, 0, 0, 0];
-                  setIsActive(newTab);
-                }}
-              >
-                <div className="descriptionContainer">
-                  <h3>Vinted</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                    illum veniam ipsam sint ut, neque reprehenderit ipsum
-                    voluptatem nihil quaerat eius temporibus!
-                  </p>
-                  <div className="btnLink">DEMO</div>
-                </div>
-                <img src={Vinted} alt="Vinted homepage" />
-              </div>
-              <div
-                className={`marvel ${
-                  isActive[1] === 1 ? "active" : "inactive"
-                }`}
-                onClick={() => {
-                  const newTab = [0, 1, 0, 0, 0];
-                  setIsActive(newTab);
-                }}
-              >
-                <div className="descriptionContainer">
-                  <h3>Marvel</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                    illum veniam ipsam sint ut, neque reprehenderit ipsum
-                    voluptatem nihil quaerat eius temporibus!
-                  </p>
-                </div>
-                <img src={Marvel} alt="Marvel homepage" />
-              </div>
-              <div
-                className={`airbnb ${
-                  isActive[2] === 1 ? "active" : "inactive"
-                }`}
-                onClick={() => {
-                  const newTab = [0, 0, 1, 0, 0];
-                  setIsActive(newTab);
-                }}
-              >
-                <div className="descriptionContainer">
-                  <h3>Airbnb App</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                    illum veniam ipsam sint ut, neque reprehenderit ipsum
-                    voluptatem nihil quaerat eius temporibus!
-                  </p>
-                </div>
-                <img src={Airbnb} alt="Airbnb app" />
-              </div>
-              <div
-                className={`deliveroo ${
-                  isActive[3] === 1 ? "active" : "inactive"
-                }`}
-                onClick={() => {
-                  const newTab = [0, 0, 0, 1, 0];
-                  setIsActive(newTab);
-                }}
-              >
-                <div className="descriptionContainer">
-                  <h3>Deliveroo</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                    illum veniam ipsam sint ut, neque reprehenderit ipsum
-                    voluptatem nihil quaerat eius temporibus!
-                  </p>
-                </div>
-                <img src={Deliveroo} alt="Deliveroo homepage" />
-              </div>
-              <div
-                className={`tripadvisor ${
-                  isActive[4] === 1 ? "active" : "inactive"
-                }`}
-                onClick={() => {
-                  const newTab = [0, 0, 0, 0, 1];
-                  setIsActive(newTab);
-                }}
-              >
-                <div className="descriptionContainer">
-                  <h3>Tripadvisor</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    odit deleniti aperiam aliquam mollitia quia dicta dolorem
-                    illum veniam ipsam sint ut, neque reprehenderit ipsum
-                    voluptatem nihil quaerat eius temporibus!
-                  </p>
-                </div>
-                <img src={Tripadvisor} alt="Tripadvisor homepage" />
-              </div>
-            </div>
+            <h2>Projects_</h2>
+            <p>
+              This section showcases the projects I've worked on, highlighting
+              my skills and competencies. Each project includes links to a live
+              demo and its code repository for your exploration.
+            </p>
+            <Projects />
           </div>
         </section>
 
+        {/* ABOUT ME SECTION */}
+
         <section id="aboutMe">
           <div className="wrapper">
-            <h2>About me</h2>
-            <div>
-              <h3>Skills</h3>
+            <h2>About me_</h2>
+            <div className="skills">
               <div>
-                <h4>Technologies</h4>
+                <h3>Technologies</h3>
                 <div className="skillsContainer">
                   <div>
                     <div className="skill">
@@ -242,11 +147,20 @@ function App() {
                 </div>
               </div>
               <div>
-                <h4>Languages</h4>
-                <div className="skillsContainer">
-                  <div>French</div>
-                  <div>English</div>
-                  <div>German</div>
+                <h3>Languages</h3>
+                <div className="languagesContainer">
+                  <div>
+                    <div>FR</div>
+                    <div>French</div>
+                  </div>
+                  <div>
+                    <div>EN</div>
+                    <div>English</div>
+                  </div>
+                  <div>
+                    <div>DE</div>
+                    <div>German</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,30 +171,19 @@ function App() {
                   <div>2024</div>
                   <div>2006</div>
                 </div>
-                <Experience
-                  title="Web and Mobile Developer"
-                  from="2023"
-                  to="2024"
-                  city="Paris"
-                  where="Le Reacteur"
-                  position="left"
-                />
-                <Experience
-                  title="Business Coordinator"
-                  from="2018"
-                  to="2019"
-                  city="Neuchâtel"
-                  where="CEFCO"
-                  position="right"
-                />
-                <Experience
-                  title="Polymechanic CFC"
-                  from="2006"
-                  to="2010"
-                  city="Bienne"
-                  where="Rolex SA"
-                  position="left"
-                />
+                {data.education.map((exp, index) => {
+                  return (
+                    <Experience
+                      key={index}
+                      title={exp.title}
+                      from={exp.from}
+                      to={exp.to}
+                      city={exp.city}
+                      where={exp.where}
+                      position={exp.position}
+                    />
+                  );
+                })}
               </div>
             </div>
             <div>
@@ -290,81 +193,63 @@ function App() {
                   <div>2024</div>
                   <div>2010</div>
                 </div>
-                <Experience
-                  title="R&D Project Manager and Key Account Sales Manager"
-                  from="2020"
-                  to="Present"
-                  city="Bienne"
-                  where="Walca SA and Doxa SA"
-                  position="left"
-                />
-                <Experience
-                  title="First Level Manager - Sevice Desk"
-                  from="2019"
-                  to="2020"
-                  city="Bern"
-                  where="KAIO Kanton Bern"
-                  position="right"
-                />
-                <Experience
-                  title="Global Customer Care coordinator"
-                  from="2017"
-                  to="2019"
-                  city="Bienne"
-                  where="Bien-Air Dental SA"
-                  position="left"
-                />
-                <Experience
-                  title="After sales technical support coordinator"
-                  from="2013"
-                  to="2017"
-                  city="Bienne"
-                  where="Bien-Air Dental SA"
-                  position="right"
-                />
-                <Experience
-                  title="Tooling mechanic"
-                  from="2012"
-                  to="2013"
-                  city="Bienne"
-                  where="Bien-Air Dental SA"
-                  position="left"
-                />
-                <Experience
-                  title="Tooling mechanic"
-                  from="2010"
-                  to="2011"
-                  city="Bienne"
-                  where="Rolex"
-                  position="right"
-                />
+                {data.workExperience.map((exp, index) => {
+                  return (
+                    <Experience
+                      key={index}
+                      title={exp.title}
+                      from={exp.from}
+                      to={exp.to}
+                      city={exp.city}
+                      where={exp.where}
+                      position={exp.position}
+                    />
+                  );
+                })}
               </div>
+            </div>
+            <div className="resume">
+              <h4>Still curious? Then get my resume!</h4>
+              <a
+                href="https://drive.google.com/file/d/1_oHwGTYM-t6Vy0B_n5GNPDK5Z_YpCIRW/view"
+                target="_blank"
+                className="btnResume"
+              >
+                MY RESUME <FontAwesomeIcon icon="fa-file-arrow-down" />
+              </a>
             </div>
           </div>
         </section>
 
+        {/* CONTACT SECTION */}
+
         <section id="contact">
           <div className="wrapper">
-            <h2>Contact</h2>
+            <h2>Contact_</h2>
             <div className="contactContainer">
-              <div>
+              <a href="mailto:frischknecht.adrien@gmail.com">
                 <FontAwesomeIcon icon="fa-envelope" />
                 <div>Email</div>
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/adrien-frischknecht/"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon="fa-brands fa-linkedin" />
                 <div>LinkedIn</div>
-              </div>
-              <div>
+              </a>
+              <a href="https://github.com/frischknechta" target="_blank">
                 <FontAwesomeIcon icon="fa-brands fa-github" />
                 <div>Github</div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
+        <div className="bigShape1"></div>
+        <div className="bigShape2"></div>
       </main>
       <footer>
-        <div className="wrapper">Realized by me</div>
+        <div className="wrapper">Adrien Frischknecht - 2024</div>
       </footer>
     </>
   );

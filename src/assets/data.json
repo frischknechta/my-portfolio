@@ -1,0 +1,78 @@
+{
+  "education": [
+    {
+      "title": "Web and Mobile Developer",
+      "from": "2023",
+      "to": "2024",
+      "city": "Paris",
+      "where": "Le Reacteur",
+      "position": "left"
+    },
+    {
+      "title": "Business Coordinator",
+      "from": "2018",
+      "to": "2019",
+      "city": "Neuchâtel",
+      "where": "CEFCO",
+      "position": "right"
+    },
+    {
+      "title": "Polymechanic CFC",
+      "from": "2006",
+      "to": "2010",
+      "city": "Bienne",
+      "where": "Rolex SA",
+      "position": "left"
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "R&D Project Manager and Key Account Sales Manager",
+      "from": "2020",
+      "to": "Present",
+      "city": "Bienne",
+      "where": "Walca SA and Doxa SA",
+      "position": "left"
+    },
+    {
+      "title": "First Level Manager - Sevice Desk",
+      "from": "2019",
+      "to": "2020",
+      "city": "Bern",
+      "where": "KAIO Kanton Bern",
+      "position": "right"
+    },
+    {
+      "title": "Global Customer Care coordinator",
+      "from": "2017",
+      "to": "2019",
+      "city": "Bienne",
+      "where": "Bien-Air Dental SA",
+      "position": "left"
+    },
+    {
+      "title": "After sales technical support coordinator",
+      "from": "2013",
+      "to": "2017",
+      "city": "Bienne",
+      "where": "Bien-Air Dental SA",
+      "position": "right"
+    },
+    {
+      "title": "Tooling mechanic",
+      "from": "2012",
+      "to": "2013",
+      "city": "Bienne",
+      "where": "Bien-Air Dental SA",
+      "position": "left"
+    },
+    {
+      "title": "Tooling mechanic",
+      "from": "2010",
+      "to": "2011",
+      "city": "Bienne",
+      "where": "Rolex",
+      "position": "right"
+    }
+  ]
+}
