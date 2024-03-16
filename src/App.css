@@ -205,21 +205,14 @@ section {
 
 .skillsContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
   padding: 20px 0;
-  gap: 20px;
-}
-
-.skillsContainer > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
 }
 
 .skill {
-  flex: 1;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,9 +248,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   position: relative;
   margin: 50px 0;
+  padding: 20px 0;
 }
 
 .timeline {
@@ -270,6 +264,8 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .timeline > div:first-child {

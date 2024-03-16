@@ -43,13 +43,6 @@
   box-shadow: 5px 5px 15px 0px rgba(239, 240, 243, 0.7);
 }
 
-.right svg {
-  position: absolute;
-  left: -15px;
-  bottom: calc(50% - 20px);
-  font-size: 40px;
-}
-
 .right .arrow {
   background-color: var(--secondary-color);
   position: absolute;

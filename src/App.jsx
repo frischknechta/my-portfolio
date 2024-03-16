@@ -1,7 +1,11 @@
+import Projects from "./components/Projects/Projects";
+import Experience from "./components/Experience/Experience";
+import data from "./assets/data/data.json";
+import { useState } from "react";
+
 import "./App.css";
 import "./assets/css/responsive.css";
 
-import Experience from "./components/Experience/Experience";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faEnvelope,
@@ -37,10 +41,6 @@ import Expo from "./assets/img/Expo.png";
 import MongoDB from "./assets/img/MongoDB-orange.svg";
 import ExpressJS from "./assets/img/Expressjs-orange.png";
 import Profile from "./assets/img/Profile.png";
-
-import data from "./assets/data/data.json";
-import Projects from "./components/Projects/Projects";
-import { useState } from "react";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -127,49 +127,45 @@ function App() {
               <div>
                 <h3>Technologies</h3>
                 <div className="skillsContainer">
-                  <div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-html5" />
-                      <div>HTML</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-css3" />
-                      <div>CSS</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-js" />
-                      <div>JavaScript</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-react" />
-                      <div>React</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-react" />
-                      <div>React Native</div>
-                    </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-html5" />
+                    <div>HTML</div>
                   </div>
-                  <div>
-                    <div className="skill">
-                      <img src={Expo} alt="Expo logo" />
-                      <div>Expo</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-node-js" />
-                      <div>Node.js</div>
-                    </div>
-                    <div className="skill">
-                      <img src={ExpressJS} alt="MongDB logo" />
-                      <div>Express</div>
-                    </div>
-                    <div className="skill">
-                      <img src={MongoDB} alt="MongDB logo" />
-                      <div>MongoDB</div>
-                    </div>
-                    <div className="skill">
-                      <FontAwesomeIcon icon="fa-brands fa-github" />
-                      <div>GitHub</div>
-                    </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-css3" />
+                    <div>CSS</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-js" />
+                    <div>JavaScript</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-react" />
+                    <div>React</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-react" />
+                    <div>React Native</div>
+                  </div>
+                  <div className="skill">
+                    <img src={Expo} alt="Expo logo" />
+                    <div>Expo</div>
+                  </div>
+                  <div className="skill">
+                    <img src={ExpressJS} alt="MongDB logo" />
+                    <div>Express</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-node-js" />
+                    <div>Node.js</div>
+                  </div>
+                  <div className="skill">
+                    <img src={MongoDB} alt="MongDB logo" />
+                    <div>MongoDB</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-github" />
+                    <div>GitHub</div>
                   </div>
                 </div>
               </div>

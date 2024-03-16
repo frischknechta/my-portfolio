@@ -58,7 +58,7 @@
     flex-direction: column;
   }
 
-  .projectsContainer > div.active {
+  .projectsContainer .active {
     flex: unset;
   }
 
@@ -69,15 +69,39 @@
   }
 
   .projectsContainer .active .descriptionContainer {
-    height: 200px;
+    height: 60%;
   }
 
   .projectsContainer .inactive .descriptionContainer h3 {
     writing-mode: unset;
     transform: none;
+    margin-bottom: 0;
   }
 
   .projectsContainer .inactive img {
+    display: none;
+  }
+
+  /* ABOUT ME SECTION */
+
+  .skill {
+    width: 25%;
+    /* width: calc(100% / 3); */
+  }
+
+  .experiences {
+    gap: 30px;
+  }
+
+  .left,
+  .right {
+    margin: 0;
+    box-shadow: none;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .arrow {
     display: none;
   }
 }
@@ -99,6 +123,22 @@
 
   #introduction .btn {
     align-self: center;
+  }
+
+  /* ABOUT ME SECTION */
+
+  .skill {
+    width: 50%;
+  }
+
+  /* CONTACT SECTION */
+
+  .contactContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: auto;
+    padding-bottom: 30px;
   }
 }
 
@@ -142,7 +182,4 @@
   #introduction .btn > div:hover {
     background-position: 0 100%;
   }
-}
-
-@media (min-width: 800px) {
 }
