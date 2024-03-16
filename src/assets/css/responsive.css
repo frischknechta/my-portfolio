@@ -1,0 +1,148 @@
+@media (max-width: 1200px) {
+  /* GENERAL */
+
+  .wrapper {
+    width: 100vw;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* HEADER */
+
+  header nav {
+    display: none;
+  }
+
+  header .visibleXs {
+    display: unset;
+    font-size: 24px;
+  }
+
+  header .menu.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    background-color: var(--accentuation);
+  }
+
+  /* INTRODUCTION SECTION */
+
+  #introduction {
+    height: 500px;
+  }
+
+  #introduction > div {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  #introduction img {
+    max-height: 300px;
+    bottom: 20px;
+  }
+
+  #introduction .shape {
+    height: 250px;
+    width: 250px;
+    bottom: 20px;
+  }
+
+  /* PROJECTS SECTION */
+
+  .projectsContainer {
+    flex-direction: column;
+  }
+
+  .projectsContainer > div.active {
+    flex: unset;
+  }
+
+  .projectsContainer img {
+    width: 100%;
+    height: auto;
+    object-position: top;
+  }
+
+  .projectsContainer .active .descriptionContainer {
+    height: 200px;
+  }
+
+  .projectsContainer .inactive .descriptionContainer h3 {
+    writing-mode: unset;
+    transform: none;
+  }
+
+  .projectsContainer .inactive img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  /* INTRODUCTION SECTION */
+
+  #introduction {
+    height: 700px;
+  }
+
+  #introduction img {
+    bottom: 20%;
+  }
+
+  #introduction .shape {
+    bottom: 20%;
+  }
+
+  #introduction .btn {
+    align-self: center;
+  }
+}
+
+/* ANIMATION & HOVER */
+
+@media (min-width: 1000px) {
+  /* HEADER LINKS ANIMATION */
+
+  header a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    transition: width 0.3s ease-out;
+  }
+
+  header a:hover::after {
+    width: 100%;
+  }
+
+  /* INTRO BUTTON ANIMATION */
+
+  #introduction .btn > div {
+    color: var(--secondary-color);
+    background: linear-gradient(
+      to right,
+      var(--main-color),
+      var(--main-color) 50%,
+      var(--secondary-color) 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    background-position: 100%;
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+  }
+
+  #introduction .btn > div:hover {
+    background-position: 0 100%;
+  }
+}
+
+@media (min-width: 800px) {
+}

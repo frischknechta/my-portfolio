@@ -79,17 +79,12 @@ header a {
   font-weight: bold;
 }
 
-header a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: var(--main-color);
-  transition: width 0.3s ease-out;
+header .visibleXs {
+  display: none;
 }
 
-header a:hover::after {
-  width: 100%;
+header .menu {
+  display: none;
 }
 
 /* MAIN */
@@ -137,7 +132,6 @@ section {
   height: 500px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 #introduction > div {
@@ -156,6 +150,7 @@ section {
 
 #introduction .btn {
   background-color: var(--accentuation);
+  color: var(--secondary-color);
   width: fit-content;
   padding: 20px;
   font-size: 24px;
@@ -163,27 +158,6 @@ section {
   border-radius: var(--radius);
   text-decoration: none;
   text-transform: uppercase;
-}
-
-#introduction .btn > div {
-  color: var(--secondary-color);
-  background: linear-gradient(
-    to right,
-    var(--main-color),
-    var(--main-color) 50%,
-    var(--secondary-color) 50%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  overflow: hidden;
-  background-position: 100%;
-  background-size: 200% 100%;
-  transition: background-position 0.3s ease;
-}
-
-#introduction .btn > div:hover {
-  background-position: 0 100%;
 }
 
 #introduction img {

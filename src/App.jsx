@@ -1,10 +1,13 @@
 import "./App.css";
+import "./assets/css/responsive.css";
+
 import Experience from "./components/Experience/Experience";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faEnvelope,
   faFileArrowDown,
   faDesktop,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
@@ -25,7 +28,8 @@ library.add(
   faLinkedin,
   faEnvelope,
   faFileArrowDown,
-  faDesktop
+  faDesktop,
+  faBars
 );
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -34,10 +38,13 @@ import MongoDB from "./assets/img/MongoDB-orange.svg";
 import ExpressJS from "./assets/img/Expressjs-orange.png";
 import Profile from "./assets/img/Profile.png";
 
-import data from "./assets/data.json";
+import data from "./assets/data/data.json";
 import Projects from "./components/Projects/Projects";
+import { useState } from "react";
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
       <header>
@@ -56,6 +63,26 @@ function App() {
               <a href="#contact">Contact</a>
             </div>
           </nav>
+          <div className="visibleXs" onClick={() => setShowMenu(!showMenu)}>
+            <FontAwesomeIcon icon="fa-bars" />
+          </div>
+        </div>
+        <div className={`menu ${showMenu ? "visible" : "hidden"}`}>
+          <div>
+            <a href="#projects" onClick={() => setShowMenu(!showMenu)}>
+              Projects
+            </a>
+          </div>
+          <div>
+            <a href="#aboutMe" onClick={() => setShowMenu(!showMenu)}>
+              About Me
+            </a>
+          </div>
+          <div>
+            <a href="#contact" onClick={() => setShowMenu(!showMenu)}>
+              Contact
+            </a>
+          </div>
         </div>
       </header>
       <main>
