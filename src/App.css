@@ -1,7 +1,4 @@
 :root {
-  /* --main-color: #1b4543;
-  --secondary-color: #b3d0c6;
-  --accentuation: #f0be6f; */
   --main-color: #eff0f3;
   --secondary-color: #0d0d0d;
   --accentuation: #f0944f;
@@ -9,6 +6,10 @@
 }
 
 /* GENERAL */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;

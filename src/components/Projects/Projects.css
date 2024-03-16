@@ -1,6 +1,7 @@
 .projectsContainer {
   display: flex;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .projectsContainer > div {

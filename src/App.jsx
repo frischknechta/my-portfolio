@@ -50,7 +50,7 @@ function App() {
       <header>
         <div className="wrapper">
           <div>
-            <a href="/">HOME</a>
+            <a href="#top">HOME</a>
           </div>
           <nav>
             <div>
