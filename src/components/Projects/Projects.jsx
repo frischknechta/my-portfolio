@@ -88,22 +88,19 @@ const Projects = () => {
       >
         <div className="descriptionContainer">
           <div>
-            <h3>Airbnb App</h3>
-            <p>
-              A reproduction of the Airbnb app, working both on iOS and Android,
-              built with React Native / Expo.
-            </p>
+            <h3>Tripadvisor</h3>
+            <p>A reproduction of a city page on Tripavisor.</p>
           </div>
           <div className="projectLinks">
             <a
-              href="https://vinted-af.netlify.app/"
+              href="https://mytripadvisor-berlin.netlify.app/"
               target="_blank"
               className="btnLink"
             >
               <FontAwesomeIcon icon="fa-desktop" /> DEMO
             </a>
             <a
-              href="https://github.com/frischknechta/Airbnb-app"
+              href="https://github.com/frischknechta/TripAdvisor-front"
               target="_blank"
               className="btnLink"
             >
@@ -112,7 +109,7 @@ const Projects = () => {
           </div>
           <div className="descriptionBackground"></div>
         </div>
-        <img src={Airbnb} alt="Airbnb app" />
+        <img src={Tripadvisor} alt="Tripadvisor homepage" />
       </div>
       <div
         className={`deliveroo ${isActive[3] === 1 ? "active" : "inactive"}`}
@@ -157,19 +154,16 @@ const Projects = () => {
       >
         <div className="descriptionContainer">
           <div>
-            <h3>Tripadvisor</h3>
-            <p>A reproduction of a city page on Tripavisor.</p>
+            <h3>Airbnb App</h3>
+            <p>
+              A reproduction of the Airbnb app, working both on iOS and Android,
+              built with React Native / Expo.
+            </p>
           </div>
           <div className="projectLinks">
+            <div></div>
             <a
-              href="https://mytripadvisor-berlin.netlify.app/"
-              target="_blank"
-              className="btnLink"
-            >
-              <FontAwesomeIcon icon="fa-desktop" /> DEMO
-            </a>
-            <a
-              href="https://github.com/frischknechta/TripAdvisor-front"
+              href="https://github.com/frischknechta/Airbnb-app"
               target="_blank"
               className="btnLink"
             >
@@ -178,7 +172,7 @@ const Projects = () => {
           </div>
           <div className="descriptionBackground"></div>
         </div>
-        <img src={Tripadvisor} alt="Tripadvisor homepage" />
+        <img src={Airbnb} alt="Airbnb app" />
       </div>
     </div>
   );

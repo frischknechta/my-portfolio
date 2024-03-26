@@ -178,7 +178,28 @@
     transition: background-position 0.3s ease;
   }
 
-  #introduction .btn > div:hover {
+  #introduction .btn:hover > div {
+    background-position: 0 100%;
+  }
+
+  .contactContainer > a {
+    color: var(--secondary-color);
+    background: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--secondary-color) 50%,
+      var(--main-color) 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    background-position: 100%;
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+  }
+
+  .contactContainer > a:hover {
     background-position: 0 100%;
   }
 }

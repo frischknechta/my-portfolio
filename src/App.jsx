@@ -234,7 +234,7 @@ function App() {
             <div className="resume">
               <h4>Still curious? Then get my resume!</h4>
               <a
-                href="https://drive.google.com/file/d/1_oHwGTYM-t6Vy0B_n5GNPDK5Z_YpCIRW/view"
+                href="https://drive.google.com/file/d/1M_jIWDy7CpC9dwl2RuGPtRx0knfxPuTl/view?usp=sharing"
                 target="_blank"
                 className="btnResume"
               >
