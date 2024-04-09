@@ -7,6 +7,44 @@
   }
 }
 
+@media (max-width: 1000px) {
+  /* INTRODUCTION SECTION */
+
+  #introduction {
+    height: 500px;
+  }
+
+  #introduction > div {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  #introduction img {
+    max-height: 300px;
+    bottom: 20px;
+  }
+
+  #introduction .shape {
+    height: 250px;
+    width: 250px;
+    bottom: 20px;
+  }
+
+  /* ABOUT ME SECTION */
+
+  .left,
+  .right {
+    max-width: 300px;
+    width: 100%;
+  }
+  .left {
+    margin-left: -400px;
+  }
+  .right {
+    margin-left: 400px;
+  }
+}
+
 @media (max-width: 800px) {
   /* HEADER */
 
@@ -28,28 +66,6 @@
     position: absolute;
     top: 60px;
     background-color: var(--accentuation);
-  }
-
-  /* INTRODUCTION SECTION */
-
-  #introduction {
-    height: 500px;
-  }
-
-  #introduction > div {
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  #introduction img {
-    max-height: 300px;
-    bottom: 20px;
-  }
-
-  #introduction .shape {
-    height: 250px;
-    width: 250px;
-    bottom: 20px;
   }
 
   /* PROJECTS SECTION */

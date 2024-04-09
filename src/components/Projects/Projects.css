@@ -44,7 +44,7 @@
 
 .projectsContainer .active .descriptionContainer {
   color: var(--secondary-color);
-  height: 50%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,7 +52,7 @@
 }
 
 .projectsContainer .active {
-  flex: 4;
+  flex: 6;
 }
 
 .projectsContainer .active .btnLink {
