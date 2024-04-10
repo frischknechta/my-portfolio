@@ -80,8 +80,9 @@
 
   .projectsContainer img {
     width: 100%;
-    height: auto;
-    object-position: top;
+    height: 100%;
+    object-fit: cover;
+    object-position: cente;
   }
 
   .projectsContainer .active .descriptionContainer {
@@ -89,9 +90,12 @@
   }
 
   .projectsContainer .inactive .descriptionContainer h3 {
-    writing-mode: unset;
     transform: none;
     margin-bottom: 0;
+    position: relative;
+    width: auto;
+    right: unset;
+    bottom: unset;
   }
 
   .projectsContainer .inactive img {
@@ -121,7 +125,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   /* INTRODUCTION SECTION */
 
   #introduction {
