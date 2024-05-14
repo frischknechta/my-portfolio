@@ -53,6 +53,7 @@
 
 .projectsContainer .active {
   flex: 6;
+  transition: flex 500ms ease-out;
 }
 
 .projectsContainer .active .btnLink {
@@ -63,10 +64,14 @@
   border-radius: var(--radius);
   text-decoration: none;
   font-size: 18px;
+  visibility: visible;
+  transition: color 500ms;
 }
 
 .projectsContainer .active p {
   font-size: 20px;
+  visibility: visible;
+  transition: visibility 200ms ease-out 500ms;
 }
 
 .projectsContainer .inactive .descriptionContainer {
@@ -82,6 +87,7 @@
 .projectsContainer .inactive {
   flex: 1;
   position: relative;
+  transition: flex 500ms ease-out;
 }
 
 .projectsContainer .inactive h3 {
@@ -94,7 +100,7 @@
 
 .projectsContainer .inactive p,
 .projectsContainer .inactive .btnLink {
-  display: none;
+  visibility: hidden;
 }
 
 .projectLinks {

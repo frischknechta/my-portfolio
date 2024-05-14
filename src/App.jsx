@@ -41,6 +41,11 @@ import Expo from "./assets/img/Expo.png";
 import MongoDB from "./assets/img/MongoDB-orange.svg";
 import ExpressJS from "./assets/img/Expressjs-orange.png";
 import Profile from "./assets/img/Profile.png";
+import Next from "./assets/img/next.png";
+import Jest from "./assets/img/jest.svg";
+import ReactQuery from "./assets/img/reactQuery.png";
+import Redux from "./assets/img/redux.svg";
+import Typescript from "./assets/img/typescript.png";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -140,19 +145,24 @@ function App() {
                     <div>JavaScript</div>
                   </div>
                   <div className="skill">
+                    <img src={Typescript} alt="Typescript logo" />
+                    <div>TypeScript</div>
+                  </div>
+                  <div className="skill">
                     <FontAwesomeIcon icon="fa-brands fa-react" />
                     <div>React</div>
                   </div>
+
                   <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-react" />
-                    <div>React Native</div>
+                    <img src={Next} alt="Next logo" />
+                    <div>Next.js</div>
                   </div>
                   <div className="skill">
-                    <img src={Expo} alt="Expo logo" />
-                    <div>Expo</div>
+                    <img src={ReactQuery} alt="React Query logo" />
+                    <div>React Query</div>
                   </div>
                   <div className="skill">
-                    <img src={ExpressJS} alt="MongDB logo" />
+                    <img src={ExpressJS} alt="Express logo" />
                     <div>Express</div>
                   </div>
                   <div className="skill">
@@ -162,6 +172,23 @@ function App() {
                   <div className="skill">
                     <img src={MongoDB} alt="MongDB logo" />
                     <div>MongoDB</div>
+                  </div>
+                  <div className="skill">
+                    <FontAwesomeIcon icon="fa-brands fa-react" />
+                    <div>React Native</div>
+                  </div>
+                  <div className="skill">
+                    <img src={Expo} alt="Expo logo" />
+                    <div>Expo</div>
+                  </div>
+
+                  <div className="skill">
+                    <img src={Redux} alt="Redux logo" />
+                    <div>Redux</div>
+                  </div>
+                  <div className="skill">
+                    <img src={Jest} alt="Jest logo" />
+                    <div>Jest</div>
                   </div>
                   <div className="skill">
                     <FontAwesomeIcon icon="fa-brands fa-github" />

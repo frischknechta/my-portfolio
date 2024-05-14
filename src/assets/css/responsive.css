@@ -222,4 +222,11 @@
   .contactContainer > a:hover {
     background-position: 0 100%;
   }
+
+  /* PROJECT CONTAINER LINKS HOVER*/
+
+  .projectsContainer .btnLink:hover {
+    color: var(--main-color);
+    transition: color 500ms;
+  }
 }
