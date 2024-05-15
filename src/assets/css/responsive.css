@@ -82,7 +82,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: cente;
+    object-position: center;
   }
 
   .projectsContainer .active .descriptionContainer {
@@ -96,6 +96,11 @@
     width: auto;
     right: unset;
     bottom: unset;
+    width: fit-content;
+  }
+
+  .projectsContainer .inactive p {
+    display: none;
   }
 
   .projectsContainer .inactive img {
