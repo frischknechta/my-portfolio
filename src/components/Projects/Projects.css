@@ -7,7 +7,7 @@
 .projectsContainer > div {
   position: relative;
   overflow: hidden;
-  height: 350px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -44,7 +44,7 @@
 
 .projectsContainer .active .descriptionContainer {
   color: var(--secondary-color);
-  height: 60%;
+  height: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,7 +53,6 @@
 
 .projectsContainer .active {
   flex: 6;
-  transition: flex 500ms ease-out;
 }
 
 .projectsContainer .active .btnLink {
@@ -69,9 +68,9 @@
 }
 
 .projectsContainer .active p {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 22px;
   visibility: visible;
-  transition: visibility 200ms ease-out 500ms;
 }
 
 .projectsContainer .inactive .descriptionContainer {
@@ -87,7 +86,6 @@
 .projectsContainer .inactive {
   flex: 1;
   position: relative;
-  transition: flex 500ms ease-out;
 }
 
 .projectsContainer .inactive h3 {

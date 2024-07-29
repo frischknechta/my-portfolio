@@ -99,7 +99,7 @@ main {
     rgba(240, 148, 79, 1) 100%
   );
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 section {

@@ -52,3 +52,21 @@
   left: -15px;
   bottom: calc(50% - 15px);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .left,
+  .right {
+    scale: 0.5;
+    opacity: 0;
+    animation: scale-effect linear both;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+  }
+}
+
+@keyframes scale-effect {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
