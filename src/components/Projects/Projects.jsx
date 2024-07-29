@@ -39,7 +39,7 @@ const Projects = () => {
               <FontAwesomeIcon icon="fa-desktop" /> DEMO
             </a>
             <a
-              href="hhttps://github.com/frischknechta/next-blog"
+              href="https://github.com/frischknechta/next-blog"
               target="_blank"
               className="btnLink"
             >
