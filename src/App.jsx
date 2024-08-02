@@ -1,10 +1,8 @@
 import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
+import Technologies from "./components/Technologies/Technologies";
 import data from "./assets/data/data.json";
 import { useState } from "react";
-
-import "./App.css";
-import "./assets/css/responsive.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -37,15 +35,10 @@ library.add(
 );
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Expo from "./assets/img/Expo.png";
-import MongoDB from "./assets/img/MongoDB-orange.svg";
-import ExpressJS from "./assets/img/Expressjs-orange.png";
 import Profile from "./assets/img/Profile.png";
-import Next from "./assets/img/next.png";
-import Jest from "./assets/img/jest.svg";
-import ReactQuery from "./assets/img/reactQuery.png";
-import Redux from "./assets/img/redux.svg";
-import Typescript from "./assets/img/typescript.png";
+
+import "./App.css";
+import "./assets/css/responsive.css";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -131,70 +124,7 @@ function App() {
             <div className="skills">
               <div>
                 <h3>Technologies</h3>
-                <div className="skillsContainer">
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-html5" />
-                    <div>HTML</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-css3" />
-                    <div>CSS</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-js" />
-                    <div>JavaScript</div>
-                  </div>
-                  <div className="skill">
-                    <img src={Typescript} alt="Typescript logo" />
-                    <div>TypeScript</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-react" />
-                    <div>React</div>
-                  </div>
-
-                  <div className="skill">
-                    <img src={Next} alt="Next logo" />
-                    <div>Next.js</div>
-                  </div>
-                  <div className="skill">
-                    <img src={ReactQuery} alt="React Query logo" />
-                    <div>React Query</div>
-                  </div>
-                  <div className="skill">
-                    <img src={ExpressJS} alt="Express logo" />
-                    <div>Express</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-node-js" />
-                    <div>Node.js</div>
-                  </div>
-                  <div className="skill">
-                    <img src={MongoDB} alt="MongDB logo" />
-                    <div>MongoDB</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-react" />
-                    <div>React Native</div>
-                  </div>
-                  <div className="skill">
-                    <img src={Expo} alt="Expo logo" />
-                    <div>Expo</div>
-                  </div>
-
-                  <div className="skill">
-                    <img src={Redux} alt="Redux logo" />
-                    <div>Redux</div>
-                  </div>
-                  <div className="skill">
-                    <img src={Jest} alt="Jest logo" />
-                    <div>Jest</div>
-                  </div>
-                  <div className="skill">
-                    <FontAwesomeIcon icon="fa-brands fa-github" />
-                    <div>GitHub</div>
-                  </div>
-                </div>
+                <Technologies />
               </div>
               <div>
                 <h3>Languages</h3>
